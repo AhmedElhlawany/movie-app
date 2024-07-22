@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App</title>
+
+    <link rel="stylesheet" href="webfonts/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <head>
+        
+        
+    </head>
+    
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="home d-flex flex-wrap bg-dark w-100 position-relative">
+
+        <div
+            class="side-bar-menus text-white d-flex flex-column justify-content-between position-fixed top-0 z-3 bg-dark ">
+
+            <ul class="list-unstyled">
+                <li id="now-playing" class="my-3 mt-5 ms-4 ">Now playing</li>
+                <li id="Popular" class="my-3 ms-4">Popular</li>
+                <li id="top-rated" class="my-3 ms-4">Top Rated</li>
+                <li id="Trending" class="my-3 ms-4">Trending</li>
+                <li id="UPcoming" class="my-3 ms-4">UPcoming</li>
+                <li id="Contact" class="my-3 ms-4"><a class="text-decoration-none text-white" href="#Contact-us">Contact Us</a></li>
+            </ul>
+            <div class="copy m-4">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-solid fa-globe"></i>
+                <p>Copyright Â© 2019 All Rights
+                    Reserved.</p>
+            </div>
+        </div>
+        <div class="side-bar bg-light d-flex flex-column align-items-center position-fixed top-0 z-3">
+            <img src="images/logo.png" class="w-75 mt-4" alt="logo">
+            <i class="fa-solid fa-bars fs-1" id="bar"></i>
+            <i class="fa-solid fa-xmark fs-1 d-none" id="close"></i>
+
+            <div class="d-flex flex-column mb-4">
+                <i class="fa-solid fa-globe mb-2"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+        <input type="text" placeholder="Search" id="search" class="rounded-5 border-light bg-transparent w-50 p-3 my-5 text-white">
+        <div class="main p-1">
+            <div class="container">
+                
+                <div class="row m-5" id="movie-card">
+                    <span class="loader"></span>
+                    
+
+
+
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    <div class="now-playing d-none" >
+        <div class="container">
+            <div class="row m-5" id="now-movie-card">
+                <span class="loader"></span>
+                
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="Popular d-none" >
+        <div class="container">
+            <div class="row m-5" id="popular-movie-card">
+                <span class="loader"></span>
+                
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="top-rated d-none" >
+        <div class="container">
+            <div class="row m-5" id="top-movie-card">
+                <span class="loader"></span>
+                
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="Trending d-none" >
+        <div class="container">
+            <div class="row m-5" id="trend-movie-card">
+                <span class="loader"></span>
+                
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="UPcoming d-none" >
+        <div class="container">
+            <div class="row m-5" id="up-movie-card">
+                <span class="loader"></span>
+                
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="Contact p-1" id="Contact-us">
+        <div class="container">
+            <h2 class="text-white mt-5">Contact US</h2>
+            <div class="d-flex align-items-center justify-content-center contact-item">
+                <div class="w-50 px-4">
+                
+               
+                    <input type="text" oninput="ValidateInputes(this)" class="form-control my-3" placeholder="Enter Your Name" id="name">
+                  <div class="alert d-none alert-danger py-1 mt-2">
+                    <small>Name is not valid</small>
+                  </div>
+                
+                
+                  
+                    
+                    <input type="tel" oninput="ValidateInputes(this)" class="form-control my-3" placeholder="Enter Your Phone" id="phone">
+                    <div class="alert d-none alert-danger py-1 mt-2">
+                        <small>Phone is not valid</small>
+                      </div>
+                
+                  
+               
+                    <input type="password" oninput="ValidateInputes(this)" class="form-control my-3" placeholder="Enter Your Password" id="password">
+                    <div class="alert d-none alert-danger py-1 mt-2">
+                        <small>Pasword is not valid</small>
+                      </div>
+                
+                </div>
+                <div class="w-50">
+                  
+                    
+                    <input type="email" oninput="ValidateInputes(this)" class="form-control my-3" placeholder="Enter Your Email" id="email">
+                    <div class="alert d-none alert-danger py-1 mt-2">
+                        <small>Email is not valid</small>
+                      </div>
+               
+                  
+               
+                    <input type="number" oninput="ValidateInputes(this)" class="form-control my-3" placeholder="Enter Your Age" id="Age">
+                    <div class="alert d-none alert-danger py-1 mt-2">
+                        <small>Age is not valid</small>
+                      </div>
+                
+                  
+                    
+                    <input type="password" oninput="ValidateInputes(this)" class="form-control my-3" placeholder="Enter Your REpassword" id="repassword">
+                    <div class="alert d-none alert-danger py-1 mt-2">
+                        <small>Password is not valid</small>
+                      </div>
+                
+                </div>
+            </div>
+                <button type="button" id="Submit"  class="btn btn-outline-light border-0">Submit</button>
+            </div>
+            
+        </div>
+        <i class="fa-solid fa-up-long to-start"></i>
+
+
+
+
+
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/nowplaying.js"></script>
+        <script src="js/popular.js"></script>
+        <script src="js/toptared.js"></script>
+        <script src="js/trending.js"></script>
+        <script src="js/upcoming.js"></script>
+
+</body>
+
+</html>
